@@ -18,6 +18,24 @@ register('featured-collection', {
 
   init() {
     window.console.log('Initialising featured collection section');
+    this.addToCart();
+  },
+
+  addToCart() {
+    $("[js-ajax-cart='addToCart']").each(function(i,el) {
+      $(el).on('click', function(e) {
+        e.preventDefault();
+        
+        $.post('/cart/add.js', {
+          quantity: $(el).data('quantity'),
+          id: $(el).data('variant-id')
+        });
+        // Reload page so the cart gets updated
+        setTimeout(function() {
+          location.reload()
+        }, 1000);
+      });
+    });
   },
 
   publicMethod() {
