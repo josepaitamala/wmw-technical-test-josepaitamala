@@ -1,5 +1,7 @@
 import '../../styles/theme.scss';
 import '../../styles/theme.scss.liquid';
+import 'flickity';
+import 'flickity/dist/flickity.min.css'
 
 import {focusHash, bindInPageLinks} from '@shopify/theme-a11y';
 import {cookiesEnabled} from '@shopify/theme-cart';

@@ -4,6 +4,26 @@
  * Base styling for the featured collection product grid.
  *
  */
-.featured-collection {
-  
+.mf-featured-collection {
+  &__intro {
+    h2 {
+      color: $color-midnight-blue;
+      font-size: 4rem;
+      line-height: 4.9rem;
+    }
+    p {
+      font-size: 1.8rem;
+      color: $color-dusty-gray;
+    }
+  }
+  &__slider {
+    
+  }
+  &__slider-item {
+    width: 100%;
+    float: left;
+    @include media-query($medium-up) {
+      width: 25%;
+    }
+  }
 }

@@ -27,6 +27,7 @@
 @import './core/responsive-tables';
 @import './core/rte';
 @import './core/typography';
+@import './core/custom-bootstrap';
 
 /**
  * Components.
@@ -42,6 +43,12 @@
 @import './sections/featured-collection';
 @import './sections/site-header';
 @import './sections/preview-bar-iframe';
+
+/**
+ * Utilities.
+ */
+@import './utilities/text-alignments';
+@import './utilities/responsive-spacings';
 
 /**
  * Templates.

@@ -1,12 +1,12 @@
 /**
  * Text colors.
  */
-$color-body-text: 'aktiv-grotesk', sans-serif;
+$color-body-text: 'Helvetica Neue', sans-serif;
 
 /**
  * Background colors.
  */
-$color-body: 'aktiv-grotesk', sans-serif;
+$color-body: 'Helvetica Neue', sans-serif;
 
 /**
  * Placeholders.
@@ -29,15 +29,17 @@ $color-error: #ff6d6d;
 $color-error-bg: #ffffff;
 $color-success: #000000;
 $color-success-bg: #000000;
+$color-midnight-blue: #003366;
+$color-dusty-gray: #9B9B9B;
 
 /**
  * Typography.
  */
-$font-heading: 'aktiv-grotesk', sans-serif;
-$font-body: var(--font-body);
-$font-body-weight: var(--font-body-weight);
-$font-body-style: var(--font-body-style);
-$font-body-bold-weight: var(--font-body-bold-weight);
+$font-heading: 'Helvetica Neue', sans-serif;
+$font-body: 'Helvetica Neue', sans-serif;
+$font-body-weight: 300;
+$font-body-style: normal;
+$font-body-bold-weight: 600;
 
 /**
  * Transitions.
