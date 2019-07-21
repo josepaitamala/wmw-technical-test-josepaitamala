@@ -1,0 +1,47 @@
+
+/* Responsive Text Alignments */
+.u-text-left { text-align: left; }
+.u-text-right { text-align: right; }
+.u-text-center { text-align: center; }
+.u-text-justify { text-align: justify; }
+
+@media (min-width: 768px) {
+    .u-text-left\@sm { text-align: left; }
+    .u-text-right\@sm { text-align: right; }
+    .u-text-center\@sm { text-align: center; }
+    .u-text-justify\@sm { text-align: justify; }
+}
+
+@media (min-width: 992px) {
+    .u-text-left\@md { text-align: left; }
+    .u-text-right\@md { text-align: right; }
+    .u-text-center\@md { text-align: center; }
+    .u-text-justify\@md { text-align: justify; }
+}
+
+@media (min-width: 1125px) {
+    .u-text-left\@lg { text-align: left; }
+    .u-text-right\@lg { text-align: right; }
+    .u-text-center\@lg { text-align: center; }
+    .u-text-justify\@lg { text-align: justify; }
+}
+
+
+/* Images */
+
+.alignleft {
+    float: left;
+    margin: 10px 20px 20px 0;
+}
+
+.alignright {
+    float: right;
+    margin: 10px 0 20px 20px;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
