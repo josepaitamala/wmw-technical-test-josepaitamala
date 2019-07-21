@@ -11,6 +11,10 @@
       font-size: 2.8rem;
       line-height: 3.4rem;
       @include media-query($medium-up) {
+        font-size: 3.8rem;
+        line-height: 4.2rem;
+      }
+      @include media-query($large-up) {
         font-size: 4rem;
         line-height: 4.9rem;
       }
@@ -63,6 +67,9 @@
       font-size: 1.8rem;
       line-height: 2.3rem;
       @include media-query($medium-up) {
+        font-size: 2rem;
+      }
+      @include media-query($large-up) {
         font-size: 2.1rem;
       }
     }
@@ -70,6 +77,9 @@
       font-size: 1.8rem;
       line-height: 2.1rem;
       @include media-query($medium-up) {
+        line-height: 2.3rem;
+      }
+      @include media-query($large-up) {
         line-height: 2.6rem;
       }
     }
