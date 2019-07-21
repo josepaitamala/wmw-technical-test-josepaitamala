@@ -29,11 +29,14 @@ register('featured-collection', {
         $.post('/cart/add.js', {
           quantity: $(el).data('quantity'),
           id: $(el).data('variant-id')
-        });
-        // Reload page so the cart gets updated
-        setTimeout(function() {
-          location.reload()
-        }, 1000);
+        }, function(data) {
+          $('.js-cart-count').addClass('active');
+          $.getJSON('/cart.js', function(cart) {
+            $('.js-cart-count').html(cart.item_count);
+            $('.js-cart-count').removeClass('active');
+          });
+        }, 'json');
+
       });
     });
   },
