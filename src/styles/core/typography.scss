@@ -6,8 +6,13 @@ body {
   font-family: $font-body;
   font-weight: $font-body-weight;
   font-style: $font-body-style;
-  font-size: 1.6rem;
-  line-height: 2.6rem;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: $color-body-text;
+  @include media-query($medium-up) {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
 }
 
 h1,

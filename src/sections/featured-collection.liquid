@@ -11,15 +11,15 @@
   
   <div class="mf-featured-collection__intro container-fluid u-padding-top u-padding-bottom-large u-padding-top-large@lg u-padding-bottom-large@lg">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3 u-text-center">
-        <h2 class="u-margin-bottom-small">{{ collection.title | escape }}</h2>
-        <p>{{ collection.description }}</p>
+      <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 u-text-center">
+        <h2 class="u-margin-bottom-small title">{{ collection.title | escape }}</h2>
+        <p class="u-padding-left-large@xs u-padding-right-large@xs u-padding-left-none@lg u-padding-right-none@lg">{{ collection.description }}</p>
       </div>
     </div>
     
   </div>
   
-  <div class="mf-featured-collection__slider u-margin-bottom-large u-margin-bottom-huge@lg" 
+  <div class="mf-featured-collection__slider u-margin-bottom-huge u-margin-bottom-huge@lg" 
     data-flickity='
       { 
         "cellAlign": "left", 
@@ -29,25 +29,28 @@
     {% for product in collection.products limit: 6 %}
       {% assign current_variant = product.selected_or_first_available_variant %}
       <div class="mf-featured-collection__slider-item">
-        <a href="{{ product.url | within: collection }}">
-          <div>
+        <a href="{{ product.url | within: collection }}" class="mf-featured-collection__link">
+          <div class="mf-featured-collection__image">
             {% if product.featured_image != blank %}
               {{ product.featured_image | img_url: 'large' | img_tag }}
             {% endif %}
             
-            <span js-ajax-cart="addToCart" data-variant-id="{{ current_variant.id }}" data-quantity="1">Add to cart</span>
-          </div>
-
-          <div>
-            <p>{{ product.title | escape }}</p>
-
-            <span>
-              {% include 'product-price' %}
-            </span>
+            <span js-ajax-cart="addToCart" data-variant-id="{{ current_variant.id }}" data-quantity="1" class="add-to-cart hidden-xs hidden-sm hidden-md">Add to cart</span>
           </div>
         </a>
+
+        <div class="mf-featured-collection__product-info clearfix">
+          <a href="{{ product.url | within: collection }}" class="mf-featured-collection__link"><h3 class="title">{{ product.title | escape }}</h3></a>
+
+          <p class="price u-margin-bottom">{% include 'product-price' %}</p>
+        </div>
+      
       </div>
     {% endfor %}
+  </div>
+
+  <div class="u-padding-top-large u-margin-bottom-huge u-margin-bottom-huge@lg u-text-center">
+    <a href="#" class="button">View Collection</a>
   </div>
   
 </section>

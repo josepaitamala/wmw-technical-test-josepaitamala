@@ -6,24 +6,107 @@
  */
 .mf-featured-collection {
   &__intro {
-    h2 {
+    .title {
       color: $color-midnight-blue;
-      font-size: 4rem;
-      line-height: 4.9rem;
-    }
-    p {
-      font-size: 1.8rem;
-      color: $color-dusty-gray;
+      font-size: 2.8rem;
+      line-height: 3.4rem;
+      @include media-query($medium-up) {
+        font-size: 4rem;
+        line-height: 4.9rem;
+      }
     }
   }
   &__slider {
-    
+    max-width: 306px;
+    margin: 0 auto;
+    @include media-query($medium-up) {
+      max-width: 684px;
+    }
+    @include media-query($large-up) {
+      max-width: 960px;
+    }
+    @include media-query($widescreen) {
+      max-width: 1300px;
+    }
+    .flickity-prev-next-button {
+      @include media-query($large-down) {
+        display: none;
+      }
+      &.previous {
+        left: -40px;
+      }
+      &.next {
+        right: -40px;
+      }
+    }
+
   }
   &__slider-item {
     width: 100%;
     float: left;
+    padding: 10px;
     @include media-query($medium-up) {
+      width: 33.33333%;
+    }
+    @include media-query($large-up) {
       width: 25%;
     }
   }
+  &__image {
+    position: relative;
+  }
+  &__product-info {
+    .title {
+      color: $color-midnight-blue;
+      display: block;
+      font-size: 1.8rem;
+      line-height: 2.3rem;
+      @include media-query($medium-up) {
+        font-size: 2.1rem;
+      }
+    }
+    .price {
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+      @include media-query($medium-up) {
+        line-height: 2.6rem;
+      }
+    }
+  }
+  &__link {
+    display: block;
+    text-decoration: none;
+    .add-to-cart {
+      position: absolute;
+      bottom: 20px; 
+      display: block;
+      background: white;
+      text-align: center;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      color: $color-midnight-blue;
+      font-weight: 600;
+      padding: 0;
+      line-height: 4.7rem;
+      width: 0;
+      height: 4.7rem;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;      
+      @include transition(all 0.2s ease-in-out);
+    }
+    &:hover {
+      .add-to-cart {
+        visibility: visible;
+        opacity: 1;
+        width: 90%;
+      }
+    }
+      
+  }
 }
+
+
+
+

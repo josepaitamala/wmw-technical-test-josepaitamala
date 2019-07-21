@@ -1,4 +1,6 @@
 .button {
+  background: $color-midnight-blue;
+  color: $color-white;
   display: inline-block;
   vertical-align: middle;
   width: auto;
@@ -8,4 +10,8 @@
   text-decoration: none;
   user-select: none;
   appearance: none;
+  font-size: 1.4rem;
+  line-height: 3.5rem;
+  padding: 0 15px;
+  font-weight: 600;
 }

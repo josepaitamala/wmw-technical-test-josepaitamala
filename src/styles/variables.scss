@@ -1,12 +1,12 @@
 /**
  * Text colors.
  */
-$color-body-text: 'Helvetica Neue', sans-serif;
+$color-body-text: #9B9B9B;
 
 /**
  * Background colors.
  */
-$color-body: 'Helvetica Neue', sans-serif;
+$color-body: #fff;
 
 /**
  * Placeholders.
@@ -23,10 +23,11 @@ $color-border: var(--color-border);
 /**
  * Helpers.
  */
+$color-white: #fff;
 $color-disabled: #000000;
 $color-disabled-border: #000000;
 $color-error: #ff6d6d;
-$color-error-bg: #ffffff;
+$color-error-bg: $color-white;
 $color-success: #000000;
 $color-success-bg: #000000;
 $color-midnight-blue: #003366;
