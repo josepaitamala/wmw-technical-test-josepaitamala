@@ -29,6 +29,7 @@
       max-width: 1300px;
     }
     .flickity-prev-next-button {
+      top: 40%;
       @include media-query($large-down) {
         display: none;
       }

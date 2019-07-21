@@ -14,4 +14,13 @@
   line-height: 3.5rem;
   padding: 0 15px;
   font-weight: 600;
+  @include media-query($medium-up) {
+    font-size: 1.8rem;
+    line-height: 5.5rem;
+    padding: 0 25px;
+  }
+  &:hover,
+  &:focus {
+    color: $color-white;
+  }
 }
