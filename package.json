@@ -20,6 +20,7 @@
     "@shopify/slate-tools": "1.0.0-beta.12",
     "babel-preset-shopify": "^16.2.0",
     "eslint-plugin-shopify": "^19.0.0",
+    "flickity": "^2.2.1",
     "stylelint-config-prettier": "^3.0.4",
     "stylelint-config-shopify": "^5.0.0"
   },
